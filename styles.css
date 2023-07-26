@@ -1,0 +1,108 @@
+.container
+{
+    width: 380px;
+    height: 590px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 4%;
+    margin: 0 auto;
+    
+ 
+
+}
+
+.display
+{
+    width: 340px;
+    height: 100px;
+    background-color:lightgray;
+    border-radius: 4%;
+    margin: 20px auto;
+    border: 2px solid black;
+
+}
+
+.clear
+{
+    background-color: lightblue;
+    width: 158px;
+    height: 60px;
+    border-radius: 4%;
+    /* margin-top: 10px; */
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete
+{
+    background-color: lightblue;
+    width: 158px;
+    height: 60px;
+    border-radius: 4%;
+    /* margin-top: 10px; */
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c1
+{
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+
+.numbersandfunctions
+{
+    
+    margin: 10px auto;
+    width: 340px;
+    height: 350px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 4%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+   
+    
+}
+
+.placeholderfornow
+{
+    /* display: flex; */
+  
+    
+
+    background-color: #abbedb;
+    width: 70px;
+    height: 70px;
+    border-radius: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    /* flex-grow: 1; */
+    
+}
+
+.func
+{
+    background-color: brown;
+}
+:root
+{
+    text-align: center;
+    font-size: 36px;   
+}
+.equals
+{
+    background-color: green;
+}
