@@ -59,9 +59,11 @@ or the equal key the number is added and submitted
 
 let firstnum = 0;
 let operator = 0;
-let secondnum = 5;
+let secondnum = 0;
 
 let display = [];
+let displaytwo = [];
+let peanut = 0;
 console.log(Number(display.join("").replaceAll(",", "ee")));
 
 
@@ -74,16 +76,30 @@ outputtext = Number(display.join(""))
 firstnum = outputtext;
 // console.log(operator);
 if (operator == 0)
+console.log("testing");
+displayz.innerText = outputtext; 
 
-displayz.innerText = outputtext; 
-displayz.innerText = outputtext; 
 
 }
 
 
-    
+function updatetwoo(){
+    let displayx = document.getElementById("screenbot");
+
+    outputtexttwo = Number(displaytwo.join("")) 
+    secondnum = outputtexttwo;
+    if (operator != 0)
+    {
+        console.log("MESTINgsting");
+    displayx.innerText = outputtexttwo;   
+    }
+}
+
+
+    if (operator == 0 && peanut == 0){
 
     const seven = document.getElementById("7");
+    
     
     seven.addEventListener("click", function seven()
     { 
@@ -92,6 +108,7 @@ displayz.innerText = outputtext;
         display.push(7);
         console.log(display);
         update();
+        console.log(peanut);
     
     }
         
@@ -209,6 +226,10 @@ displayz.innerText = outputtext;
         update();
     }
         );
+}
+
+
+
 
     
 
@@ -216,10 +237,12 @@ displayz.innerText = outputtext;
 
         dividing.addEventListener("click", function dividing()
     { 
+        peanut = 1; 
         console.log("diving");
         operator = "÷";
         displayz = document.getElementById("displaying");
-        displayz.innerText = outputtext + " " + operator + " "; 
+        displayz.innerText = outputtext + " " + operator + " ";
+        
         return operator;
         
     }
@@ -228,10 +251,12 @@ displayz.innerText = outputtext;
         const multiplying = document.getElementById("x");
         multiplying.addEventListener("click", function multiplying()
     { 
+        peanut = 1; 
         console.log("multiplying");
         operator = "x";
         displayz = document.getElementById("displaying");
         displayz.innerText = outputtext + " " + operator + " "; 
+        
         return operator;
         
     }
@@ -240,10 +265,12 @@ displayz.innerText = outputtext;
         const subtracting = document.getElementById("-");
         subtracting.addEventListener("click", function subtracting()
     { 
+        peanut = 1; 
         console.log("subtracting");
         operator = "-";
         displayz = document.getElementById("displaying");
         displayz.innerText = outputtext + " " + operator + " "; 
+         
         return operator;
         
     }
@@ -251,11 +278,14 @@ displayz.innerText = outputtext;
         const adding = document.getElementById("+");
         adding.addEventListener("click", function adding()
     { 
-        
+        peanut = 1; 
         console.log("adding");
+        console.log(peanut);
         operator = "+";
+        console.log(operator);
         displayz = document.getElementById("displaying");
         displayz.innerText = outputtext + " " + operator + " "; 
+    
         return operator;
     }
         );
@@ -273,139 +303,145 @@ displayz.innerText = outputtext;
     }
         );
 
+        
 
-        function secondcalc()
-        {
-            const seven = document.getElementById("7");
+
+    const sevensecond = document.getElementById("7");
     
-    seven.addEventListener("click", function seven()
+    sevensecond.addEventListener("click", function sevensecond()
     { 
         
         console.log("7")
-        display.push(7);
-        console.log(display);
-        update();
+        displaytwo.push(7);
+        console.log(displaytwo);
+        updatetwoo();
+        
     
     }
         
         );
 
 
-    const eight = document.getElementById("8");
+    const eightsecond = document.getElementById("8");
     
-    eight.addEventListener("click", function eight()
+    eightsecond.addEventListener("click", function eightsecond()
     { 
         
         console.log("8")
-        display.push(8);
-        console.log(display);
-        update();
+        displaytwo.push(8);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
 
-    const nine = document.getElementById("9");
+    const ninesecond = document.getElementById("9");
     
-    nine.addEventListener("click", function nine()
+    ninesecond.addEventListener("click", function ninesecond()
     { 
         
         console.log("9")
-        display.push(9);
-        console.log(display);
-        update();
+        displaytwo.push(9);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
 
-    const four = document.getElementById("4");
+    const foursecond = document.getElementById("4");
     
-    four.addEventListener("click", function four()
+    foursecond.addEventListener("click", function foursecond()
     { 
         
         console.log("4")
-        display.push(4);
-        console.log(display);
-        update();
+        displaytwo.push(4);
+        console.log(displaytwo);
+        updatetwoo();
+        console.log("hahahA");
     }
         );
 
 
-    const five = document.getElementById("5");
+    const fivesecond = document.getElementById("5");
     
-    five.addEventListener("click", function five()
+    fivesecond.addEventListener("click", function fivesecond()
     { 
         
         console.log("5")
-        display.push(5);
-        console.log(display);
-        update();
+        displaytwo.push(5);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
 
-    const six = document.getElementById("6");
+    const sixsecond = document.getElementById("6");
     
-    six.addEventListener("click", function six()
+    sixsecond.addEventListener("click", function sixsecond()
     { 
         
         console.log("6")
-        display.push(6);
-        console.log(display);
-        update();
+        displaytwo.push(6);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
-    const one = document.getElementById("1");
+    const onesecond = document.getElementById("1");
     
-    one.addEventListener("click", function one()
+    onesecond.addEventListener("click", function onesecond()
     { 
         
         console.log("1")
-        display.push(1);
-        console.log(display);
-        update();
+        displaytwo.push(1);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
-        const two = document.getElementById("2");
+        const twosecond = document.getElementById("2");
     
-    two.addEventListener("click", function two()
+    twosecond.addEventListener("click", function twosecond()
     { 
         
         console.log("2")
-        display.push(2);
-        console.log(display);
-        update();
+        displaytwo.push(2);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
-        const three = document.getElementById("3");
+        const threesecond = document.getElementById("3");
     
-    three.addEventListener("click", function three()
+    threesecond.addEventListener("click", function threesecond()
     { 
         
         console.log("3")
-        display.push(3);
-        console.log(display);
-        update();
+        displaytwo.push(3);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
-        const zero = document.getElementById("0");
+        const zerosecond = document.getElementById("0");
     
-    zero.addEventListener("click", function zero()
+    zerosecond.addEventListener("click", function zerosecond()
     { 
         
         console.log("0")
-        display.push(0);
-        console.log(display);
-        update();
+        displaytwo.push(0);
+        console.log(displaytwo);
+        updatetwoo();
     }
         );
 
 
-        }
 
+
+
+
+
+     
 
 
 
