@@ -11,8 +11,8 @@
 <div class="container">
 
     <div class="display" id="displaying">
-        <div class="screentop" id="screentop"></div>
-        <div class="screenbot" id="screenbot">0</div>
+        <div class="screentop" id="screentop">1</div>
+        <div class="screenbot" id="screenbot">2</div>
     </div>
     <div class="c1">
     <div class="clear">CLEAR</div>
@@ -64,6 +64,8 @@ let secondnum = 0;
 let display = [];
 let displaytwo = [];
 let peanut = 0;
+let outputtext = 0;
+
 console.log(Number(display.join("").replaceAll(",", "ee")));
 
 
@@ -75,9 +77,23 @@ let displayz = document.getElementById("screenbot");
 outputtext = Number(display.join(""))
 firstnum = outputtext;
 // console.log(operator);
+
 if (operator == 0)
+{
 console.log("testing");
 displayz.innerText = outputtext; 
+}
+
+if (operator != 0 )
+{
+    
+    displaytwoo = document.getElementById("screentop");
+    displaytwoo.innerText = outputtext + " " + operator + " ";
+    
+    console.log("newpizza");
+    
+    
+}
 
 
 }
@@ -96,7 +112,7 @@ function updatetwoo(){
 }
 
 
-    if (operator == 0 && peanut == 0){
+    
 
     const seven = document.getElementById("7");
     
@@ -104,26 +120,45 @@ function updatetwoo(){
     seven.addEventListener("click", function seven()
     { 
         
-        console.log("7")
-        display.push(7);
-        console.log(display);
-        update();
-        console.log(peanut);
-    
-    }
+    if (peanut == 0)
+        {
+            console.log("7")
+            display.push(7);
+            console.log(display);
+            update();
+        }
+
+    if (peanut == 1)
+        {
+            console.log("7*")
+            displaytwo.push(7);
+            console.log(displaytwo);
+            updatetwoo();
+        }
         
-        );
+});
 
 
     const eight = document.getElementById("8");
     
     eight.addEventListener("click", function eight()
     { 
-        
+        if (peanut == 0)
+        {  
         console.log("8")
         display.push(8);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("8*")
+            displaytwo.push(8);
+            console.log(displaytwo);
+            updatetwoo();
+        }
+
     }
         );
 
@@ -132,11 +167,22 @@ function updatetwoo(){
     
     nine.addEventListener("click", function nine()
     { 
-        
+        if (peanut == 0)
+        {  
         console.log("9")
         display.push(9);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("9*")
+            displaytwo.push(9);
+            console.log(displaytwo);
+            updatetwoo();
+        }
+
     }
         );
 
@@ -145,11 +191,21 @@ function updatetwoo(){
     
     four.addEventListener("click", function four()
     { 
-        
+        if (peanut == 0)
+        { 
         console.log("4")
         display.push(4);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("4*")
+            displaytwo.push(4);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
 
@@ -159,10 +215,21 @@ function updatetwoo(){
     five.addEventListener("click", function five()
     { 
         
+        if (peanut == 0)
+        { 
         console.log("5")
         display.push(5);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("5*")
+            displaytwo.push(5);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
 
@@ -171,11 +238,21 @@ function updatetwoo(){
     
     six.addEventListener("click", function six()
     { 
-        
+        if (peanut == 0)
+        { 
         console.log("6")
         display.push(6);
         console.log(display);
         update();
+        }
+        
+        if (peanut == 1)
+        {
+            console.log("6*")
+            displaytwo.push(6);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
 
@@ -183,11 +260,22 @@ function updatetwoo(){
     
     one.addEventListener("click", function one()
     { 
-        
+        if (peanut == 0)
+        { 
         console.log("1")
         display.push(1);
         console.log(display);
         update();
+        }
+
+
+        if (peanut == 1)
+        {
+            console.log("1*")
+            displaytwo.push(1);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
 
@@ -195,11 +283,21 @@ function updatetwoo(){
     
     two.addEventListener("click", function two()
     { 
-        
+        if (peanut == 0)
+        { 
         console.log("2")
         display.push(2);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("2*")
+            displaytwo.push(2);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
 
@@ -207,11 +305,21 @@ function updatetwoo(){
     
     three.addEventListener("click", function three()
     { 
-        
+        if (peanut == 0)
+        { 
         console.log("3")
         display.push(3);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("3*")
+            displaytwo.push(3);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
 
@@ -219,14 +327,23 @@ function updatetwoo(){
     
     zero.addEventListener("click", function zero()
     { 
-        
+        if (peanut == 0)
+        { 
         console.log("0")
         display.push(0);
         console.log(display);
         update();
+        }
+
+        if (peanut == 1)
+        {
+            console.log("0*")
+            displaytwo.push(0);
+            console.log(displaytwo);
+            updatetwoo();
+        }
     }
         );
-}
 
 
 
@@ -238,12 +355,13 @@ function updatetwoo(){
         dividing.addEventListener("click", function dividing()
     { 
         peanut = 1; 
-        console.log("diving");
+        console.log(peanut);
+        console.log("dividing");
         operator = "÷";
-        displayz = document.getElementById("displaying");
-        displayz.innerText = outputtext + " " + operator + " ";
+        // displayz = document.getElementById("displaying");
+        // displayz.innerText = outputtext + " " + operator + " ";
+        update();
         
-        return operator;
         
     }
         );
@@ -254,10 +372,10 @@ function updatetwoo(){
         peanut = 1; 
         console.log("multiplying");
         operator = "x";
-        displayz = document.getElementById("displaying");
-        displayz.innerText = outputtext + " " + operator + " "; 
+        // displayz = document.getElementById("displaying");
+        // displayz.innerText = outputtext + " " + operator + " "; 
+        update();
         
-        return operator;
         
     }
         );
@@ -268,10 +386,9 @@ function updatetwoo(){
         peanut = 1; 
         console.log("subtracting");
         operator = "-";
-        displayz = document.getElementById("displaying");
-        displayz.innerText = outputtext + " " + operator + " "; 
-         
-        return operator;
+        // displayz = document.getElementById("displaying");
+        // displayz.innerText = outputtext + " " + operator + " "; 
+        update();
         
     }
         );
@@ -283,10 +400,12 @@ function updatetwoo(){
         console.log(peanut);
         operator = "+";
         console.log(operator);
-        displayz = document.getElementById("displaying");
-        displayz.innerText = outputtext + " " + operator + " "; 
+        // displayz = document.getElementById("displaying");
+        // displayz.innerText = outputtext + " " + operator + " ";
+        update();
+     
     
-        return operator;
+
     }
         );
 
@@ -303,151 +422,7 @@ function updatetwoo(){
     }
         );
 
-        
-
-
-    const sevensecond = document.getElementById("7");
     
-    sevensecond.addEventListener("click", function sevensecond()
-    { 
-        
-        console.log("7")
-        displaytwo.push(7);
-        console.log(displaytwo);
-        updatetwoo();
-        
-    
-    }
-        
-        );
-
-
-    const eightsecond = document.getElementById("8");
-    
-    eightsecond.addEventListener("click", function eightsecond()
-    { 
-        
-        console.log("8")
-        displaytwo.push(8);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-
-    const ninesecond = document.getElementById("9");
-    
-    ninesecond.addEventListener("click", function ninesecond()
-    { 
-        
-        console.log("9")
-        displaytwo.push(9);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-
-    const foursecond = document.getElementById("4");
-    
-    foursecond.addEventListener("click", function foursecond()
-    { 
-        
-        console.log("4")
-        displaytwo.push(4);
-        console.log(displaytwo);
-        updatetwoo();
-        console.log("hahahA");
-    }
-        );
-
-
-    const fivesecond = document.getElementById("5");
-    
-    fivesecond.addEventListener("click", function fivesecond()
-    { 
-        
-        console.log("5")
-        displaytwo.push(5);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-
-    const sixsecond = document.getElementById("6");
-    
-    sixsecond.addEventListener("click", function sixsecond()
-    { 
-        
-        console.log("6")
-        displaytwo.push(6);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-    const onesecond = document.getElementById("1");
-    
-    onesecond.addEventListener("click", function onesecond()
-    { 
-        
-        console.log("1")
-        displaytwo.push(1);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-        const twosecond = document.getElementById("2");
-    
-    twosecond.addEventListener("click", function twosecond()
-    { 
-        
-        console.log("2")
-        displaytwo.push(2);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-        const threesecond = document.getElementById("3");
-    
-    threesecond.addEventListener("click", function threesecond()
-    { 
-        
-        console.log("3")
-        displaytwo.push(3);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-        const zerosecond = document.getElementById("0");
-    
-    zerosecond.addEventListener("click", function zerosecond()
-    { 
-        
-        console.log("0")
-        displaytwo.push(0);
-        console.log(displaytwo);
-        updatetwoo();
-    }
-        );
-
-
-
-
-
-
-
-     
-
-
-
-
-
-
 
 
 function operate(firstnum, secondnum, operator)
