@@ -64,6 +64,11 @@
 }
 
 
+.clear:active, .delete:active
+{  
+filter: brightness(70%);
+}
+
 .numbersandfunctions
 {
     
@@ -102,6 +107,9 @@
 .placeholderfornow:hover
 {filter: brightness(85%);}
 
+.placeholderfornow:active
+{filter: brightness(70%);}
+
 .func
 {
     background-color: #b4e8e4 ;
@@ -130,7 +138,7 @@
 .kevan
 {
    
-    font-family: Helvetica, sans-serif;
+    
     display:flex;
     justify-content: center;
 
@@ -139,7 +147,7 @@
     justify-content: center;
     font-weight:900;
     font-size: 48px;
-    font-family: Helvetica, sans-serif;
+   
     font-size: 12px;
     display: flex;
     align-items: flex-end;
@@ -148,7 +156,7 @@
 a
 {text-decoration: none;
     color: black;
-    font-family: Helvetica, sans-serif;}
+    }
 
 img{
 
