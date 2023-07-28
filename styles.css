@@ -2,7 +2,8 @@
 {
     width: 380px;
     height: 590px;
-    background-color: gray;
+    background-color: 
+    #67595E;
     border: 2px solid black;
     border-radius: 4%;
     margin: 0 auto;
@@ -15,7 +16,7 @@
 {
     width: 340px;
     height: 100px;
-    background-color:lightgray;
+    background-color:#A49393;
     border-radius: 4%;
     margin: 20px auto;
     border: 2px solid black;
@@ -24,10 +25,10 @@
 
 .clear
 {
-    background-color: lightblue;
+    background-color:  #EED6D3;
     width: 158px;
     height: 60px;
-    border-radius: 4%;
+    border-radius: 6%;
     /* margin-top: 10px; */
     border: 2px solid black;
     display: flex;
@@ -37,15 +38,16 @@
 
 .delete
 {
-    background-color: lightblue;
+    background-color: #EED6D3;
     width: 158px;
     height: 60px;
-    border-radius: 4%;
+    border-radius: 6%;
     /* margin-top: 10px; */
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .c1
@@ -56,13 +58,19 @@
     
 }
 
+.clear:hover, .delete:hover
+{
+    filter: brightness(85%);
+}
+
+
 .numbersandfunctions
 {
     
     margin: 10px auto;
     width: 340px;
     height: 350px;
-    background-color: black;
+    background-color:  #A49393;
     border: 2px solid black;
     border-radius: 4%;
 
@@ -80,31 +88,34 @@
   
     
 
-    background-color: #abbedb;
+    background-color: #E8B4B8;
     width: 70px;
     height: 70px;
-    border-radius: 4%;
+    border-radius: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     
     
-    /* flex-grow: 1; */
     
 }
+.placeholderfornow:hover
+{filter: brightness(85%);}
 
 .func
 {
-    background-color: brown;
+    background-color: #b4e8e4 ;
 }
 :root
 {
     text-align: center;
-    font-size: 36px;   
+    font-size: 36px;  
+    background-color: #f0efe6; 
 }
 .equals
 {
-    background-color: green;
+    background-color: #b4e8ca;
+    border-radius: 10%;
 }
 /* 
 #screenbot
@@ -116,3 +127,31 @@
 {
     text-align: left;
 } */
+.kevan
+{
+   
+    font-family: Helvetica, sans-serif;
+    display:flex;
+    justify-content: center;
+
+    color: black;
+    display:flex;
+    justify-content: center;
+    font-weight:900;
+    font-size: 48px;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+    /* margin-top: 500px; */
+}
+a
+{text-decoration: none;
+    color: black;
+    font-family: Helvetica, sans-serif;}
+
+img{
+
+max-width: 12px;
+max-height: 12px;
+    ;}

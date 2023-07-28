@@ -40,6 +40,8 @@
 </div>
 
 
+   <div><p class="kevan"><a href="https://github.com/kevankas">Designed by Kevan <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github-logo">
+</a></p></div>
 
 <script>
 /*
@@ -93,7 +95,8 @@ if (clears == 1)
     operator = 0;
     clears = 0;
     displayz.innerText = 0;
-    displaytwoo.innerText = 0;
+
+    
 
     firstnum = 0;
 
@@ -105,13 +108,17 @@ if (clears == 1)
     resetall = 0;
     
     placeholder = 0;
+    if (displaytwo != 0)
+    {
+        displaytwoo.innerText = 0;
+    }
      
     return;
 }
 
 if (operator == 0 && finalans == 0 && clears == 0)
 {
-console.log("testing");
+// console.log("testing");
 displayz.innerText = outputtext; 
     
 }
@@ -123,7 +130,7 @@ if (operator != 0 && finalans == 0 && clears == 0)
     displaytwoo.innerText = outputtext + " " + operator + " ";
     displayz.innerText = displaytwo;
     
-    console.log("newpizza");
+    // console.log("newpizza");
 }
 
 if (finalans == 1 && clears == 0)
@@ -151,7 +158,7 @@ function updatetwoo(){
     secondnum = outputtexttwo;
     if (operator != 0)
     {
-        console.log("MESTINgsting");
+        // console.log("MESTINgsting");
     displayx.innerText = outputtexttwo;   
     }
 }
@@ -161,7 +168,11 @@ function updatetwoo(){
 
     const seven = document.getElementById("7");
     
-    
+    // seven.addEventListener("mouseover", function sevens()
+    // {
+    //     seven.classList.add("hovering");
+    // })
+
     seven.addEventListener("click", function seven()
     { 
         
