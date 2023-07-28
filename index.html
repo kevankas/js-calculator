@@ -11,12 +11,12 @@
 <div class="container">
 
     <div class="display" id="displaying">
-        <div class="screentop" id="screentop">1</div>
-        <div class="screenbot" id="screenbot">2</div>
+        <div class="screentop" id="screentop">0</div>
+        <div class="screenbot" id="screenbot">0</div>
     </div>
     <div class="c1">
-    <div class="clear">CLEAR</div>
-    <div class="delete">DELETE</div>
+    <div class="clear" id="clear">CLEAR</div>
+    <div class="delete" id="delete">DELETE</div>
 </div>
     <div class="numbersandfunctions">
         <div class="placeholderfornow" id="7">7</div>
@@ -65,8 +65,12 @@ let display = [];
 let displaytwo = [];
 let peanut = 0;
 let outputtext = 0;
+var resetall = 0;
+let finalans = 0;
+let placeholder = 0;
+let clears = 0;
 
-console.log(Number(display.join("").replaceAll(",", "ee")));
+// console.log(Number(display.join("").replaceAll(",", "ee")));
 
 
 function update(){
@@ -78,22 +82,63 @@ outputtext = Number(display.join(""))
 firstnum = outputtext;
 // console.log(operator);
 
-if (operator == 0)
+
+
+if (clears == 1)
+{
+
+    display = [];
+    displaytwo = [];
+    finalans = 0;
+    operator = 0;
+    clears = 0;
+    displayz.innerText = 0;
+    displaytwoo.innerText = 0;
+
+    firstnum = 0;
+
+    secondnum = 0;
+
+    
+    peanut = 0;
+    outputtext = 0;
+    resetall = 0;
+    
+    placeholder = 0;
+     
+    return;
+}
+
+if (operator == 0 && finalans == 0 && clears == 0)
 {
 console.log("testing");
 displayz.innerText = outputtext; 
+    
 }
 
-if (operator != 0 )
+if (operator != 0 && finalans == 0 && clears == 0)
 {
     
     displaytwoo = document.getElementById("screentop");
     displaytwoo.innerText = outputtext + " " + operator + " ";
+    displayz.innerText = displaytwo;
     
     console.log("newpizza");
-    
-    
 }
+
+if (finalans == 1 && clears == 0)
+{
+    placeholder = operate(firstnum, secondnum, operator);
+    displaytwoo.innerText = placeholder;
+    displayz.innerText = placeholder;
+    display = [];
+    displaytwo = [];
+    display[0] = placeholder;
+    finalans = 0;
+}
+
+
+
 
 
 }
@@ -345,17 +390,70 @@ function updatetwoo(){
     }
         );
 
+    const del = document.getElementById("delete");
+        del.addEventListener("click", function del()
+    { 
+        if (peanut == 0)
+        {  
+        console.log("delete")
+        display.pop();
+        console.log(display);
+        update();
+        }
 
+        if (peanut == 1)
+        {
+            console.log("delete*")
+            displaytwo.pop();
+            console.log(displaytwo);
+            updatetwoo();
+        }
+        })
 
+        const clear = document.getElementById("clear");
+        clear.addEventListener("click", function clear()
+    { 
+        
+        
+        console.log("clear")
+        
+        var resetall = 1;
+        clears = 1;
+        update();
+        console.log(display);
+        
+        
 
+        
     
+
+        if (peanut == 1)
+        {
+            for (let k = 0; k <= 2; k++){
+            console.log("clear*")
+            displaytwo.pop();
+            display.pop();
+            console.log(displaytwo);
+            console.log(display)
+            // operator = 0;
+            var resetall = 1;
+           
+            update();
+            updatetwoo();
+        }
+        }
+        })
+
+
+
+
+
 
         const dividing = document.getElementById("÷");
 
         dividing.addEventListener("click", function dividing()
     { 
         peanut = 1; 
-        console.log(peanut);
         console.log("dividing");
         operator = "÷";
         // displayz = document.getElementById("displaying");
@@ -397,9 +495,7 @@ function updatetwoo(){
     { 
         peanut = 1; 
         console.log("adding");
-        console.log(peanut);
         operator = "+";
-        console.log(operator);
         // displayz = document.getElementById("displaying");
         // displayz.innerText = outputtext + " " + operator + " ";
         update();
@@ -413,9 +509,14 @@ function updatetwoo(){
         const equals = document.getElementById("=");
         equals.addEventListener("click", function equals()
     { 
-        
+        console.log(display.length);
+        console.log(displaytwo.length);
+        finalans = 1;
         console.log("equals");
         console.log(operate(firstnum, secondnum, operator));
+        
+        update();
+        operator = 0;
         // displayz = document.getElementById("displaying");
         // displayz.innerText = outputtext + " " + operator + " "; 
         // return operator;
@@ -463,6 +564,10 @@ function multiply(a,b)
 }
 function divide(a,b)
 {
+    if (b == 0)
+    {
+        return "Can't divide by zero";
+    }
     return a / b;
 }
 
